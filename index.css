@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html, body, .container {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  position: relative;
+}
+#map {
+  width: 100%;
+  height: 100%;
+}
+.anchorBL  {
+  display: none;
+}
+.info {
+  width: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0px 8px;
+  position: absolute;
+  z-index: 999;
+  bottom: 0px;
+  left: 0px;
+}
+.info > .text-container {
+  line-height: 32px;
+  display: flex;
+}
+.text-container {
+  display: flex;
+}
+.text-container > .title {
+  width: 100px;
+}
+.text-container > div:nth-child(2) {
+  flex: 1;
+}
+.btns {
+  height: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns > .layui-btn {
+  width: 49%;
+  margin: 0px;
+}
+#loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+.loading-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-box > i {
+  font-size: 30px;
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
